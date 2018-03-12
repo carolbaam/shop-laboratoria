@@ -70,8 +70,8 @@ const paintItems = (result) => {
          const image=item.thumbnail;
         templateProducts += `<div class="col s12 m3">
         <div class="card">
-            <div class="card-image">
-                <img src="${image}">
+            <div class="card-image" class="size">
+                <img src="${image}" >
             </div>
             <div class="card-content">
                 <p class="card-title short-text">${item.title}</p>

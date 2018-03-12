@@ -11,3 +11,8 @@
     overflow:visible;
     cursor: pointer;
 }
+
+.size{
+ width: 2px;
+ height: 5px,
+}
