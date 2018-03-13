@@ -73,13 +73,13 @@
     text-align: center;
     text-decoration: none;
     font-size: 25px;
-    color: #000;
+    color: #fff;
     padding: 5px;
     border-radius: 100%;
 }
 
-.align-left{
-    text-align: left;
+.align-right{
+    text-align: right;
 }
 
 /* Start Style button fixed shop */
