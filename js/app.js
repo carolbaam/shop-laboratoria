@@ -1,8 +1,15 @@
 $(document).ready(function(){
-    $('.carousel').carousel();
+    // $('.carousel').carousel();
   });
 
-
+$("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+          });
+          $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+          });
   const apiLoadFirst = () => {
     fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=peliculas`, )
         .then(function(response) {
