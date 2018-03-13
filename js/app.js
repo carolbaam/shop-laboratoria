@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
   const apiLoadFirst = () => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=peliculas`, )
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=articulos de coleccion`, )
         .then(function(response) {
             response.json().then(function(result) {
                // console.log(result.results);
