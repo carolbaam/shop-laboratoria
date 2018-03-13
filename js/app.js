@@ -6,6 +6,8 @@ const form=document.getElementById('search-form');
 const searchField=document.getElementById('search-key-word');
 
 const responseContainer=document.getElementsByClassName('response-container');
+const carCounter = document.getElementById('items-counter');
+let counter = 0;
 
 const booksCall = () => {
     fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?category=MLM3025`)
@@ -92,19 +94,35 @@ const apiLoad = () => {
         });
 };
 
+const addToCar = (result) => {
+    console.log(result);
+  // let filterProduct = result.filter(function(obj) {
+  //   if(obj.id === productId) {
+  //     return obj;
+  //   }
+  // });
+
+  // let productDetails = filterProduct[0];
+  // console.log(productDetails);
+  // let productsArray = []
+  // productsArray.push(productDetails);
+
+  // localStorage.setItem('productDetails', JSON.stringify(productsArray));
+}
+
 const increaseCounter = () => {
   counter += 1;
   carCounter.innerText = counter;
-  console.log(counter);
+  // addToCar(result);
 }
 
 const decreaseCounter = () => {
   counter -= 1;
   carCounter.innerText = counter;
-  console.log(counter);
 }
 
-const changeButtonStatus = event => {
+const changeButtonStatus = (id, event) => {
+    console.log(id);
     let element = event.target
     let buttonText = element.firstChild.data;
 
@@ -118,15 +136,13 @@ const changeButtonStatus = event => {
 }
 
 const paintItems = (result) => {
-    
-    
+    console.log(result);
     let containerProducts = document.getElementById('site-container');
     let templateProducts = ``;
    
      result.forEach((item) => {
-        
         const addres=item.address.state_name;
-         const image=item.thumbnail;
+        const image=item.thumbnail;
         templateProducts += `<div class="col s12 m3">
         <div class="card">
             <div class="card-image">
