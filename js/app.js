@@ -5,7 +5,7 @@ $(document).ready(function(){
   
 
   const apiLoadFirst = () => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=peliculas`, )
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=articulos de coleccion`, )
         .then(function(response) {
             response.json().then(function(result) {
                // console.log(result.results);
@@ -42,37 +42,11 @@ function closeNav() {
 
 // end function button fixed shop
 
-const musicCall = () => {
-    fetch(`https://api.mercadolibre.com/sites/MLM/search?category=MLM1168`)
-    .then(function(response) {
-        response.json().then(function(result) {
-            console.log(result);
-    });
-})
-    .catch(function(err) {
-        console.log(err);
-    });
-};
 
 
 
 
-musicCall();
 
-const hobbiesCall = () => {
-    fetch(`https://api.mercadolibre.com/sites/MLM/search?category=MLM1798`)
-        .then(function(response) {
-            response.json().then(function(result) {
-                console.log(result);
-        });
-    })
-        .catch(function(err) {
-            console.log(err);
-        });
-};
-
-
-hobbiesCall();
 
 
 
@@ -154,7 +128,36 @@ const changeButtonStatus = event => {
         element.innerText = "Agregar a carrito";
         decreaseCounter();
     }
+
 }
+
+
+const showModal=(event)=>{
+    const eventTarget=event.target;
+    console.log(eventTarget);
+    const modal=document.getElementById("modal-product");
+    modal.classList.add("display-true");
+    const id=eventTarget.dataset.id;
+    const imagen=eventTarget.dataset.image;
+    const price=eventTarget.dataset.price;
+    const title=eventTarget.dataset.title;
+    console.log(price);
+    //console.log(price)
+    fillmodal(id, imagen, price, title );
+}
+
+const fillmodal=(id, imagen, price, title)=>{
+    const imgCont=document.getElementById("image")
+    imgCont.setAttribute("src",imagen);
+    const titleModal=document.getElementById("nombre-producto")
+     titleModal.innerText=title;
+     const priceModal=document.getElementById("prices")
+     priceModal.innerHTML=price+ "MXN";
+    const containerModal=document.getElementById("modal-product");
+  
+}
+
+
 
 const paintItems = (result) => {
     let containerProducts = document.getElementById('site-container');
@@ -163,19 +166,19 @@ const paintItems = (result) => {
      result.forEach((item) => {
         const id = item.id;
         const addres=item.address.state_name;
-
+       const title=item.title;
         const image=item.thumbnail;
         templateProducts += `<div class="col-md-3 product-left"> 
         <div class="p-one simpleCart_shelfItem">							
-                <a href="single.html">
+               
                     <img src="${image}" alt="" />
                     <div class="mask">
-                        <span>Quick View</span>
+                      <button type="button" onClick=showModal(event) ><span data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</span></button>
                     </div>
-                </a>
+             
             <h4 class="short-text">${item.title}</h4>
-            <p><a href="#"><i></i> <span class="item_price">${item.price} MXN</span></a></p>
-            <button class="item_add single-but" data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+            <p><a href="#"><i></i> <span class="item_price">${item.price}MXN</span></a></p>
+            <button class="item_add single-but" data-id="${id}" data-title=${title} data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
 
         </div>
     </div>

@@ -76,7 +76,8 @@ body a{
 			margin: 5px 20px 5px 20px ;
 		}
 .item_add {
-	color: #fff;
+	background: rgb(133, 30, 30);
+	color: white;
 	border:none;
 }	
 .grid_1 img{
