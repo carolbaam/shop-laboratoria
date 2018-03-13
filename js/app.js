@@ -163,6 +163,7 @@ const paintItems = (result) => {
      result.forEach((item) => {
         const id = item.id;
         const addres=item.address.state_name;
+
         const image=item.thumbnail;
         templateProducts += `<div class="col-md-3 product-left"> 
         <div class="p-one simpleCart_shelfItem">							
@@ -175,6 +176,7 @@ const paintItems = (result) => {
             <h4 class="short-text">${item.title}</h4>
             <p><a href="#"><i></i> <span class="item_price">${item.price} MXN</span></a></p>
             <button class="item_add single-but" data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+
         </div>
     </div>
         `

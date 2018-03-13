@@ -12,6 +12,12 @@
     cursor: pointer;
 }
 
+
+.size{
+ width: 2px;
+ height: 5px,
+}
+
 /* Start Style button fixed shop */
 body {
     font-family: "Lato", sans-serif;
@@ -76,3 +82,4 @@ body {
 }
 
 /*End Style button fixed shop */
+
