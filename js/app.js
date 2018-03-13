@@ -2,19 +2,14 @@ $(document).ready(function(){
     $('.carousel').carousel();
   });
 
-const form=document.getElementById('search-form');
-const searchField=document.getElementById('search-key-word');
 
-const responseContainer=document.getElementsByClassName('response-container');
-const carCounter = document.getElementById('items-counter');
-let counter = 0;
-
-const booksCall = () => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?category=MLM3025`)
-
+  const apiLoadFirst = () => {
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=peliculas`, )
         .then(function(response) {
             response.json().then(function(result) {
-                console.log(result);
+               // console.log(result.results);
+                paintItems(result.results)
+
         });
     })
         .catch(function(err) {
@@ -22,12 +17,18 @@ const booksCall = () => {
         });
 };
 
+apiLoadFirst()
 
-booksCall();
+const form=document.getElementById('search-form');
+const searchField=document.getElementById('search-key-word');
+const responseContainer=document.getElementsByClassName('response-container');
+const carCounter = document.getElementById('items-counter');
+let counter = 0;
+
 
 
 const musicCall = () => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?category=MLM1168`)
+    fetch(`https://api.mercadolibre.com/sites/MLM/search?category=MLM1168`)
     .then(function(response) {
         response.json().then(function(result) {
             console.log(result);
@@ -44,7 +45,7 @@ const musicCall = () => {
 musicCall();
 
 const hobbiesCall = () => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?category=MLM1798`)
+    fetch(`https://api.mercadolibre.com/sites/MLM/search?category=MLM1798`)
         .then(function(response) {
             response.json().then(function(result) {
                 console.log(result);
@@ -64,7 +65,7 @@ const apiMercadolibre = () => {
     fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/users/306970587/`)
         .then(function(response) {
             response.json().then(function(result) {
-                console.log(result);
+//console.log(result);
         });
     })
         .catch(function(err) {
@@ -94,41 +95,46 @@ const apiLoad = () => {
         });
 };
 
-const addToCar = (result) => {
-    console.log(result);
-  // let filterProduct = result.filter(function(obj) {
-  //   if(obj.id === productId) {
-  //     return obj;
-  //   }
-  // });
 
-  // let productDetails = filterProduct[0];
-  // console.log(productDetails);
-  // let productsArray = []
-  // productsArray.push(productDetails);
+let productsArray = [];
+const addToCar = (id, title, price) => {
+    let product = {
+        productId: id,
+        productName: title,
+        productPrice: price
+    }
 
-  // localStorage.setItem('productDetails', JSON.stringify(productsArray));
+    let productDetails = product;
+    console.log(productDetails);
+    productsArray.push(productDetails);
+    console.log(productsArray);
+    localStorage.setItem('productDetails', JSON.stringify(productsArray));
 }
 
-const increaseCounter = () => {
+const increaseCounter = (id, title, price) => {
   counter += 1;
   carCounter.innerText = counter;
-  // addToCar(result);
+  console.log(counter);
+  console.log(title, price);
+  addToCar(id, title, price);
 }
 
 const decreaseCounter = () => {
   counter -= 1;
   carCounter.innerText = counter;
+  console.log(counter);
 }
 
-const changeButtonStatus = (id, event) => {
-    console.log(id);
+const changeButtonStatus = event => {
     let element = event.target
     let buttonText = element.firstChild.data;
+    let itemId = element.dataset.id;
+    let itemTitle = element.dataset.title;
+    let itemPrice = element.dataset.price;
 
     if(buttonText === "Agregar a carrito") {
         element.innerText = "Remover del carrito";
-        increaseCounter();
+        increaseCounter(itemId, itemTitle, itemPrice);
     } else {
         element.innerText = "Agregar a carrito";
         decreaseCounter();
@@ -136,11 +142,11 @@ const changeButtonStatus = (id, event) => {
 }
 
 const paintItems = (result) => {
-    console.log(result);
     let containerProducts = document.getElementById('site-container');
     let templateProducts = ``;
    
      result.forEach((item) => {
+        const id = item.id;
         const addres=item.address.state_name;
         const image=item.thumbnail;
         templateProducts += `<div class="col s12 m3">
@@ -153,7 +159,7 @@ const paintItems = (result) => {
                 <p class="">${item.price} MXN</p>
             </div>
             <div class="card-action">
-                <button id="" onclick="changeButtonStatus(event)" class="btn waves-effect" type="" name="action">Agregar a carrito</button>
+                <button data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" class="btn waves-effect" type="" name="action">Agregar a carrito</button>
             </div>
         </div>
     </div>`
@@ -166,3 +172,77 @@ const paintItems = (result) => {
     
 }
 
+
+const categoriesCall = (category) => {
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?category=${category}`)
+        .then(function(response) {
+            response.json().then(function(result) {
+                paintItems(result.results)
+                console.log("hola");
+        });
+    })
+        .catch(function(err) {
+            console.log(err);
+        });
+};
+
+const codeAccion="MLM3422";
+const action=document.getElementById("actionFigures").addEventListener("click", function(e){
+   
+  categoriesCall(codeAccion);
+})
+
+const codeHotWheels="MLM3398";
+const hot=document.getElementById("tazos").addEventListener("click", function(e){
+    
+   categoriesCall(codeHotWheels);
+ })
+
+const codeStarWars="MLM2661";
+const star=document.getElementById("starWars").addEventListener("click", function(e){
+    
+   categoriesCall(codeStarWars);
+ })
+
+const codeMusic="MLM7809"
+const musica=document.getElementById("musica").addEventListener("click", function(e){
+    
+   categoriesCall(codeMusic);
+ })
+
+ const codeMovies="MLM7841"
+ const movies=document.getElementById("movies").addEventListener("click", function(e){
+     
+    categoriesCall(codeMovies);
+  })
+
+  const codeSeries="MLM6217"
+  const series=document.getElementById("series").addEventListener("click", function(e){
+      
+     categoriesCall(codeSeries);
+   })
+
+   const codeBooks="MLM1196"
+   const books=document.getElementById("books").addEventListener("click", function(e){
+       
+      categoriesCall(codeBooks);
+    })
+
+    const codeComics="MLM3043"
+    const comics=document.getElementById("comics").addEventListener("click", function(e){
+        
+       categoriesCall(codeComics);
+     })
+     
+     const codeMag="MLM8227"
+     const magazines=document.getElementById("mag").addEventListener("click", function(e){
+         
+        categoriesCall(codeMag);
+      })
+
+
+
+
+//https://api.mercadolibre.com/sites/MLM/search?category=MLM7841   peliculas
+//https://api.mercadolibre.com/sites/MLM/search?category=MLM6217 series
+// https://api.mercadolibre.com/sites/MLM/search?category=MLM7809 musica
