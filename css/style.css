@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
 	background: #fff;
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 body a{
 	transition: 0.5s all;
@@ -28,7 +28,7 @@ body a{
 	-webkit-appearance: none;
 	color: rgba(0, 0, 0, 0.74);
 	font-size: 0.875em;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .search-bar input[type="submit"] {
 	background: url(../images/search.png)no-repeat 0px 0px;
@@ -96,7 +96,7 @@ body a{
 a.simpleCart_empty {
 	color: #702428;
 	font-weight: 500;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: 13px;
 }
 .box_1 p {
@@ -275,7 +275,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	font-size: 14px;
 	color: #666;
 	line-height: 1.6em;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .b-btn{
 	margin-top:3em;
@@ -285,7 +285,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	border: 2px solid #181b2a;
 	padding: 6px 15px;
 	font-size: 11px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	font-weight: 700;
 }
 .b-btn a:hover{
@@ -343,7 +343,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	font-size: 14px;
 	color: #666;
 	line-height: 1.6em;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	padding: 6px 15px 0 15px;
 	margin: 0;
 }
@@ -372,7 +372,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 .footer-left ul li a{
 	font-size: 14px;
 	color: #666;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .footer-left ul li a:hover{
 	color:#97262a;
@@ -396,7 +396,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	color: #181b2a;
 	font-size: 15px;
 	font-weight: 600;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	margin: 0;
 }
 .footer-main p a {
@@ -489,7 +489,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	color: #666;
 	display: block;
 	padding-bottom: 4px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .address input[type="text"] {
 	border: 1px solid #242424;
@@ -497,7 +497,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	width: 100%;
 	font-size: 14px;
 	padding: 10px 10px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .address{
 	margin-top:4%;
@@ -506,7 +506,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	font-size: 14px;
 	color: #666;
 	font-weight: 500;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .address input[type="submit"] {
 	background: #97262a;
@@ -634,7 +634,7 @@ ol.breadcrumb {
 .p-one p {
 	font-size: 1.7em;
 	color: #999;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	margin: 5px 0 0 0;
 	font-weight: 700;
 	display: inline-block;
@@ -796,7 +796,7 @@ ul.product-categories li a:hover {
 p.availability {
 	color: #999;
 	font-size: 13px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 .price_single {
 	font-size: 1.3em;
@@ -833,7 +833,7 @@ p.quick_desc {
 	font-size: 13px;
 	line-height: 1.6em;
 	margin-bottom: 2em;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 }
 ul.product-colors {
 	padding: 0;

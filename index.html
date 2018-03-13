@@ -21,8 +21,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'> -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 <!--//fonts-->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -269,52 +270,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Large modal -->
 
     <section id="modal-product" class="modal">
-        <div class="align-right">
-            <a class="cerrar" href="">X</a>
-        </div>
-	    <div id="over_view" class="single contact">
-			<div class="container">
-				<div class="single-main">
-					<div class="col-md-5 single-main-left">
-						<div class="sngl-top">
-							<div class="col-md-12 single-top-left">
-								<img id="image" src="" />
-							</div>
-								
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				
-					<div class="col-md-7 single-top-right">
-						<div class="details-left-info simpleCart_shelfItem">
-								<h3 id="nombre-producto">Accessories Latest</h3>
-								<p class="availability">Availability:
-										<span class="color">In stock</span>
-								</p>
-								<div class="price_single">
-									<span id="prices" class="actual item_price">$600.00</span>
+		<div>
+				<!-- class="back-modal" -->
+			<div class="align-right">
+				<a class="cerrar" href="">X</a>
+			</div>
+			<div id="over_view" class="single contact back-modal col-md-offset-1">
+				<div class="container">
+					<div class="single-main">
+						<div class="col-md-2 col-md-offset-2 single-main-left">
+							<div class="sngl-top">
+								<div class="col-md-12 single-top-left">
+									<img id="image" src="" />
 								</div>
-								<h2 class="quick">Quick Overview:</h2>
-								<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim
-										assum. Typi non habent claritatem insitam; es</p>
-
-								<div class="quantity_box">
-									<ul class="product-qty">
-										<span>Quantity:</span>
-										<select>
-											<option>1</option>
-										</select>
-									</ul>
-								</div>
+									
 								<div class="clearfix"> </div>
-								<div class="single-but item_add">
-										<button class="item_add single-but" data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+							</div>
+						</div>
+					
+						<div class="col-md-7 single-top-right">
+							<div class="details-left-info simpleCart_shelfItem">
+									<h3 id="nombre-producto">Accessories Latest</h3>
+									<p class="availability">Availability:
+											<span class="color">In stock</span>
+									</p>
+									<div class="price_single">
+										<span id="prices" class="actual item_price">$600.00</span>
+									</div>
+									<h2 class="quick">Quick Overview:</h2>
+									<p class="quick_desc">Uno de los últimos productos en existencia, condiciones de primera.</p>
+
+									<div class="quantity_box">
+										<ul class="product-qty">
+											<span>Quantity:</span>
+											<select>
+												<option>1</option>
+											</select>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+									<div class="single-but item_add">
+											<button class="item_add single-but" data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+								</div>
 							</div>
 						</div>
 					</div>
-                </div>
-			</div>		
-        </div>
+				</div>		
+			</div>
+		</div>
     </section>
 
 
