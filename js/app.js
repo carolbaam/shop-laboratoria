@@ -48,7 +48,7 @@ carCounter.innerText = counterInIndex
 // function button fixed shop
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "372px";
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
@@ -132,8 +132,18 @@ const showInSideBar = productsArray => {
 
 
 
+// const showNavPrice = totalPrice => {
+//   let priceTemplate += ` `;
+//   priceTemplate = `
+//   <p>${counter} Artículos</p>
+//   <h3>Total: ${totalPrice}</h3>
+//   <button>IR AL CARRITO</button>
+//   ` 
+// }
 
-let productsArray = [];
+
+
+let itemsArray = [];
 const addToCar = (id, title, price) => {
     let product = {
         productId: id,
@@ -143,9 +153,10 @@ const addToCar = (id, title, price) => {
 
     let productDetails = product;
     console.log(productDetails);
-    productsArray.push(productDetails);
-    console.log(productsArray);
-    localStorage.setItem('productDetails', JSON.stringify(productsArray));
+    itemsArray.push(productDetails);
+    showInSideBar(itemsArray);
+    localStorage.setItem('productDetails', JSON.stringify(itemsArray));
+
 } 
 
 const increaseCounter = (id, title, price) => {
@@ -218,14 +229,12 @@ const paintItems = (result) => {
         const image=item.thumbnail;
         templateProducts += `<div class="col-md-3 product-left"> 
         <div class="p-one simpleCart_shelfItem">							
-               
                     <img src="${image}" alt="" />
                     <div class="mask">
-                      <button type="button" onClick=showModal(event) ><span data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</span></button>
+                      <button class="item_add" type="button" onClick=showModal(event) data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</button>
                     </div>
-             
             <h4 class="short-text">${item.title}</h4>
-            <p><a href="#"><i></i> <span class="item_price">${item.price}MXN</span></a></p>
+            <p><a href="#"><i></i> <span class="item_price">${item.price} MXN</span></a></p>
             <button class="item_add single-but" data-id="${id}" data-title=${title} data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
 
         </div>
