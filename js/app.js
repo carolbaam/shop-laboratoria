@@ -1,5 +1,8 @@
 $(document).ready(function(){
-    $('.carousel').carousel();
+
+    // $('.carousel').carousel();
+
+
   });
 
   
@@ -20,11 +23,27 @@ $(document).ready(function(){
 
 apiLoadFirst()
 
-const form=document.getElementById('search-form');
-const searchField=document.getElementById('search-key-word');
-const responseContainer=document.getElementsByClassName('response-container');
+const form = document.getElementById('search-form');
+const searchField = document.getElementById('search-key-word');
+const responseContainer = document.getElementsByClassName('response-container');
 const carCounter = document.getElementById('items-counter');
 let counter = 0;
+
+let barContainer = document.getElementById('product-container');
+//Cart LocalStorage from Checkout
+let cartItemCounterIndex = localStorage.getItem('counterInIndex');
+counterInIndex = parseInt(cartItemCounterIndex);
+carCounter.innerText = counterInIndex
+// const showInitialCounter => {
+//   if(counterInIndex === NaN) {
+//     carCounter.innerText = '0';
+//   }
+//   else {
+//     carCounter.innerText = counterInIndex;
+//   }
+// }
+
+// showInitialCounter();
 
 // function button fixed shop
 
@@ -83,6 +102,34 @@ const apiLoad = () => {
             console.log(err);
         });
 };
+
+// const showNavPrice = totalPrice => {
+//   let priceTemplate += ` `;
+//   priceTemplate = `
+//   <p>${counter} Artículos</p>
+//   <h3>Total: ${totalPrice}</h3>
+//   <button>IR AL CARRITO</button>
+//   ` 
+// }
+
+let totalPrice = 0;
+const showInSideBar = productsArray => {
+  let carTemplate = ` `;
+
+  productsArray.forEach(product => {
+    totalPrice += parseInt(product.productPrice);
+    carTemplate += `
+    <div>
+      <p>${product.productName}</p>
+      <p>${product.productPrice}</p>
+      <button>X</button>
+    </div>
+    `
+    barContainer.innerHTML = carTemplate;
+    console.log(barContainer);
+    })
+  // showNavPrice(totalPrice);
+}
 
 
 let productsArray = [];
