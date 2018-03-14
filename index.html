@@ -8,9 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Free Style A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="js/jquery-1.11.0.min.js"></script> -->
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
@@ -65,9 +67,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<div class="col-md-4 top-header-right">
 				<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="./views/ourcheckout.html">
 						<h3> <div class="total">
-							<span></span> (<span id="items-counter"></span> items)</div>
+							<span></span><span id="items-counter"></span> items</div>
 							<img src="images/cart-1.png" alt="" />
 							<!-- <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" id="items-counter" class="simpleCart_quantity"></span> items)</div>
 							<img src="images/cart-1.png" alt="" /> -->
@@ -173,17 +175,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    });
 			  </script>
 			<!--End-slider-script-->
+
 	<!--start-bottom-shop--> 
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">About</a>
+		<!-- <div id="total-price-nav"></div> -->
+		<div id="product-container"></div>
+		<!-- <a href="#">About</a>
 		<a href="#">Services</a>
 		<a href="#">Clients</a>
+
 		<a href="#">Contact</a>
 	</div>
 	  
 	<div id="main">
 		<span class='flotante' style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="images/cart-1.png"> </span>
+		
 	</div>
 	<!--end-bottom-shop--> 
 	<div class="banner-bottom">
@@ -197,16 +204,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="shoes"> 
 		<div class="container"> 
 			<div id="site-container" class="product-one">
+
 								<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
 	<!--end-shoes-->
+
 	<!--start-abt-shoe-->
 	<div class="abt-shoe">
 		<div class="container"> 
 				<a href="#"><img src="images/mes-libro.jpg" alt="" /></a>
+
 							<div class="clearfix"> </div>
+
 			</div>
 		</div>
 	</div>
@@ -334,5 +345,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	<!--end-footer-text-->
 	<script src="js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

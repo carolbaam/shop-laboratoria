@@ -1,9 +1,13 @@
 let product = localStorage.getItem('productDetails');
 productDetails= JSON.parse(product);
+let cartItemCounter = localStorage.getItem('cartCounter');
+cartCounter = parseInt(cartItemCounter);
 
 let itemContainer = document.getElementById('items');
 let resume = document.getElementById('shopping-resume');
+let cartItemContainer = document.getElementById('car-counter');
 
+cartItemContainer.innerText = cartItemCounter;
 
 const removeCard = (event, id) => {
     console.log(event.target.parentNode.parentNode.parentNode.id);
