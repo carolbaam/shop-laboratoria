@@ -43,7 +43,7 @@ carCounter.innerText = counterInIndex
 // function button fixed shop
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "370px";
+    document.getElementById("mySidenav").style.width = "372px";
     document.getElementById("main").style.marginLeft = "250px";
     document.getElementById("car-icon").style.display = "none";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
@@ -123,7 +123,7 @@ const showInSideBar = productsArray => {
 
 
 
-let productsArray = [];
+let itemsArray = [];
 const addToCar = (id, title, price) => {
     let product = {
         productId: id,
@@ -133,9 +133,9 @@ const addToCar = (id, title, price) => {
 
     let productDetails = product;
     console.log(productDetails);
-    productsArray.push(productDetails);
-    showInSideBar(productsArray);
-    localStorage.setItem('productDetails', JSON.stringify(productsArray));
+    itemsArray.push(productDetails);
+    showInSideBar(itemsArray);
+    localStorage.setItem('productDetails', JSON.stringify(itemsArray));
 } 
 
 const showCounter = counter => {
