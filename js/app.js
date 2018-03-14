@@ -103,15 +103,6 @@ const apiLoad = () => {
         });
 };
 
-// const showNavPrice = totalPrice => {
-//   let priceTemplate += ` `;
-//   priceTemplate = `
-//   <p>${counter} Artículos</p>
-//   <h3>Total: ${totalPrice}</h3>
-//   <button>IR AL CARRITO</button>
-//   ` 
-// }
-
 let totalPrice = 0;
 const showInSideBar = productsArray => {
   let carTemplate = ` `;
@@ -131,6 +122,15 @@ const showInSideBar = productsArray => {
   // showNavPrice(totalPrice);
 }
 
+// const showNavPrice = totalPrice => {
+//   let priceTemplate += ` `;
+//   priceTemplate = `
+//   <p>${counter} Artículos</p>
+//   <h3>Total: ${totalPrice}</h3>
+//   <button>IR AL CARRITO</button>
+//   ` 
+// }
+
 
 let productsArray = [];
 const addToCar = (id, title, price) => {
@@ -144,6 +144,7 @@ const addToCar = (id, title, price) => {
     console.log(productDetails);
     productsArray.push(productDetails);
     console.log(productsArray);
+    showInSideBar();
     localStorage.setItem('productDetails', JSON.stringify(productsArray));
 } 
 
