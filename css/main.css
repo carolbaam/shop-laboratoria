@@ -13,7 +13,6 @@
 }
 
 
-
 .size{
  width: 2px;
  height: 5px,
@@ -91,10 +90,9 @@ body {
 
 .flotante {
     display:scroll;
-    position:fixed;
-    bottom:320px;
-    right:0px;
-    z-index: 999;
+        position:fixed;
+        bottom:320px;
+        right:0px;
 }
 
 /* #main > span > img{
@@ -102,7 +100,6 @@ body {
     z-index: 999 !important;
 
 } */
-
 
 .sidenav {
     height: 100%;
@@ -147,4 +144,5 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 

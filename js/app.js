@@ -1,8 +1,12 @@
 $(document).ready(function(){
+
     // $('.carousel').carousel();
+
+
   });
 
   
+
   const apiLoadFirst = () => {
     fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=articulos de coleccion`, )
         .then(function(response) {
@@ -19,29 +23,51 @@ $(document).ready(function(){
 
 apiLoadFirst()
 
-const form=document.getElementById('search-form');
-const searchField=document.getElementById('search-key-word');
-const responseContainer=document.getElementsByClassName('response-container');
+const form = document.getElementById('search-form');
+const searchField = document.getElementById('search-key-word');
+const responseContainer = document.getElementsByClassName('response-container');
 const carCounter = document.getElementById('items-counter');
 let counter = 0;
+
 let barContainer = document.getElementById('product-container');
+//Cart LocalStorage from Checkout
+let cartItemCounterIndex = localStorage.getItem('counterInIndex');
+counterInIndex = parseInt(cartItemCounterIndex);
+carCounter.innerText = counterInIndex
+// const showInitialCounter => {
+//   if(counterInIndex === NaN) {
+//     carCounter.innerText = '0';
+//   }
+//   else {
+//     carCounter.innerText = counterInIndex;
+//   }
+// }
+
+// showInitialCounter();
+
 // function button fixed shop
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "370px";
+    document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-    document.getElementById("car-icon").style.display = "none";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
-    document.getElementById("car-icon").style.display = "inline-block";
     document.body.style.backgroundColor = "white";
 }
 
 // end function button fixed shop
+
+
+
+
+
+
+
+
 
 const apiMercadolibre = () => {
     fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/users/306970587/`)
@@ -57,7 +83,7 @@ const apiMercadolibre = () => {
 
 apiMercadolibre();
 
-form.addEventListener('keyup', function(e){
+form.addEventListener('submit', function(e){
     e.preventDefault();
     responseContainer.innerHTML="";
     searchedForText=searchField.value;
@@ -106,6 +132,7 @@ const showInSideBar = productsArray => {
 
 
 
+
 let productsArray = [];
 const addToCar = (id, title, price) => {
     let product = {
@@ -117,13 +144,9 @@ const addToCar = (id, title, price) => {
     let productDetails = product;
     console.log(productDetails);
     productsArray.push(productDetails);
-    showInSideBar(productsArray);
+    console.log(productsArray);
     localStorage.setItem('productDetails', JSON.stringify(productsArray));
 } 
-
-const showCounter = counter => {
-  localStorage.setItem('cartCounter', counter.toString());
-}
 
 const increaseCounter = (id, title, price) => {
   counter += 1;
@@ -131,14 +154,12 @@ const increaseCounter = (id, title, price) => {
   console.log(counter);
   console.log(title, price);
   addToCar(id, title, price);
-  showCounter(counter);
 }
 
 const decreaseCounter = () => {
   counter -= 1;
   carCounter.innerText = counter;
   console.log(counter);
-  showCounter(counter);
 }
 
 const changeButtonStatus = event => {
@@ -205,7 +226,7 @@ const paintItems = (result) => {
              
             <h4 class="short-text">${item.title}</h4>
             <p><a href="#"><i></i> <span class="item_price">${item.price}MXN</span></a></p>
-            <button class="item_add single-but" data-id="${id}" data-title="${title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+            <button class="item_add single-but" data-id="${id}" data-title=${title} data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
 
         </div>
     </div>

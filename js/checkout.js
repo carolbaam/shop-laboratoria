@@ -1,13 +1,20 @@
+/*Local Storage Products Object Array*/
 let product = localStorage.getItem('productDetails');
 productDetails= JSON.parse(product);
+// local Storage Counter
 let cartItemCounter = localStorage.getItem('cartCounter');
 cartCounter = parseInt(cartItemCounter);
 
 let itemContainer = document.getElementById('items');
 let resume = document.getElementById('shopping-resume');
 let cartItemContainer = document.getElementById('car-counter');
+cartItemContainer.innerText = cartCounter;
 
-cartItemContainer.innerText = cartItemCounter;
+console.log(cartItemContainer);
+/*localStorage back in Index*/
+localStorage.setItem('counterInIndex', cartCounter.toString());
+/**/
+
 
 const removeCard = (event, id) => {
     console.log(event.target.parentNode.parentNode.parentNode.id);
