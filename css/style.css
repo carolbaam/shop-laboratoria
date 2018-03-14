@@ -5,8 +5,8 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
-	background: #E0FCFF;
-	font-family: 'Noto Sans', sans-serif;
+	background:#fff;
+	font-family: 'Alegreya Sans SC', sans-serif;
 }
 body a{
 	transition: 0.5s all;
@@ -28,7 +28,7 @@ body a{
 	-webkit-appearance: none;
 	color: rgba(0, 0, 0, 0.74);
 	font-size: 0.875em;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .search-bar input[type="submit"] {
 	background: url(../images/search.png)no-repeat 0px 0px;
@@ -75,14 +75,10 @@ body a{
 			float:left;
 			margin: 5px 20px 5px 20px ;
 		}
-
-		/* color de botones */
 .item_add {
-	background: #FF7F50;
-	/* background: rgb(133, 30, 30); */
+	background: rgb(133, 30, 30);
 	color: white;
-	height: 30px;
-	border-radius: 10%;
+	border:none;
 }	
 .grid_1 img{
 	margin-bottom:1em;
@@ -92,15 +88,15 @@ body a{
 	margin-top: 5px;
 }
 .box_1 h3 {
-	color: #404969 !important;
+	color: #702428 !important;
 	font-size: 1em;
 	font-weight: 700;
 	margin: 0;
 }
 a.simpleCart_empty {
-	color: #404969;
+	color: #702428;
 	font-weight: 500;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 13px;
 }
 .box_1 p {
@@ -243,9 +239,10 @@ a.simpleCart_empty {
 	visibility: visible;
 	display: block;
 	height: 6px;
+	width: 60px;
 	display: inline-block;
 	border: none;
-	background: #FF7F50;
+	background: #8c2830;
 }
 .callbacks_here a:after{
 	background:#181b2a;
@@ -257,9 +254,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 /*--end-banner--*/
 /*--start-banner-bottom--*/
 .banner-bottom {
-	background: #FF7F50;
-	color:#fff;
-	/* background: rgba(153, 153, 153, 0.49); */
+	background: rgba(153, 153, 153, 0.49);
 	padding-top: 3em;
 }
 .bnr-one{
@@ -280,7 +275,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	font-size: 14px;
 	color: #666;
 	line-height: 1.6em;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .b-btn{
 	margin-top:3em;
@@ -290,12 +285,12 @@ ul.callbacks_tabs.callbacks2_tabs {
 	border: 2px solid #181b2a;
 	padding: 6px 15px;
 	font-size: 11px;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 }
 .b-btn a:hover{
-	border:2px solid #FF7F50;
-	background:#FF7F50;
+	border:2px solid #8c2830;
+	background:#8c2830;
 	color:#fff;
 	text-decoration:none;
 	transition: 0.5s all;
@@ -324,8 +319,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 /*--start-abt-shoe--*/
 .abt-shoe {
 	padding-top: 3em;
-	background: #FF7F50;
-	/* background: rgba(153, 153, 153, 0.49); */
+	background: rgba(153, 153, 153, 0.49);
 }
 .abt-one {
 	text-align: center;
@@ -349,7 +343,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	font-size: 14px;
 	color: #666;
 	line-height: 1.6em;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	padding: 6px 15px 0 15px;
 	margin: 0;
 }
@@ -378,10 +372,10 @@ ul.callbacks_tabs.callbacks2_tabs {
 .footer-left ul li a{
 	font-size: 14px;
 	color: #666;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .footer-left ul li a:hover{
-	color:#FF7F50;
+	color:#97262a;
 	text-decoration:none;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
@@ -402,14 +396,14 @@ ul.callbacks_tabs.callbacks2_tabs {
 	color: #181b2a;
 	font-size: 15px;
 	font-weight: 600;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	margin: 0;
 }
 .footer-main p a {
 	color: #242424;
 }
 .footer-main p a:hover {
-  color: #FF7F50;
+  color: #8c2830;
   text-decoration: none;
   transition: 0.5s all ease;
   -webkit-transition: 0.5s all ease;
@@ -461,7 +455,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 .contact-left form input[type="submit"] {
 	font-size: 0.8em;
 	display: inline-block;
-	background: #FF7F50;
+	background: #97262a;
 	padding: 0.8em 2em;
 	border: none;
 	color: #fff;
@@ -495,7 +489,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	color: #666;
 	display: block;
 	padding-bottom: 4px;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .address input[type="text"] {
 	border: 1px solid #242424;
@@ -503,7 +497,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	width: 100%;
 	font-size: 14px;
 	padding: 10px 10px;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .address{
 	margin-top:4%;
@@ -512,7 +506,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	font-size: 14px;
 	color: #666;
 	font-weight: 500;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .address input[type="submit"] {
 	background: #97262a;
@@ -572,7 +566,7 @@ ol.breadcrumb {
 	padding: 40px 15px;
 }
 .product-left:hover .p-one{
-	border: 1px solid #FF7F50;
+	border: 1px solid #8c2830;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
 	-moz-transition: 0.5s all ease;
@@ -594,7 +588,7 @@ ol.breadcrumb {
   width:100%;
 }
 .product-left:hover .p-one p a{
-	color: #FF7F50;
+	color: #8c2830;
 }
 .product-left:hover .mask{
 	display:block;
@@ -606,8 +600,8 @@ ol.breadcrumb {
 	left: 33%;
 }
 .mask span{
-	background:#FF7F50;
-	color:#BDE4F4;
+	background:#8c2830;
+	color:#fff;
 	font-size:15px;
 	font-weight:400;
 	padding:6px 12px;
@@ -618,7 +612,7 @@ ol.breadcrumb {
 }
 .mask span:hover{
 	text-decoration:none;
-	background:#E0FCFF;
+	background:#181b2a;
 	transition: 0.7s all;
 	-webkit-transition: 0.7s all;
 	-o-transition: 0.7s all;
@@ -632,15 +626,15 @@ ol.breadcrumb {
 	margin-top:0;
 }
 .p-one h4{
-	color: #404969;
+	color: #242424;
 	font-size: 21px;
 	font-weight: 600;
 	margin: 5px 0 0 0;
 }
 .p-one p {
 	font-size: 1.7em;
-	color: #404969;
-	font-family: 'Noto Sans', sans-serif;
+	color: #999;
+	font-family: 'Lato', sans-serif;
 	margin: 5px 0 0 0;
 	font-weight: 700;
 	display: inline-block;
@@ -648,7 +642,7 @@ ol.breadcrumb {
 }
 .p-one p a {
 	text-decoration: none;
-	color: #404969;
+	color: #999;
 }
 .p-one p i {
 	background: url(../images/cart.png) no-repeat;
@@ -668,8 +662,8 @@ ol.breadcrumb {
 }
 a.add-cart {
 	text-decoration: none;
-	color: #BDE4F4;
-	background: #FF7F50;
+	color: #fff;
+	background: #8c2830;
 	padding: 0.4em 0.8em;
 	font-size: 1.15em;
 	text-transform: uppercase;
@@ -677,7 +671,7 @@ a.add-cart {
 	display: inline-block;
 }
 a.add-cart:hover {
-	background: #404969;
+	background: #181b2a;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-o-transition: 0.5s all;
@@ -752,7 +746,7 @@ li.ring-in img{
 /*--end-checkout--*/
 /*--start--single-*/
 .single-right h3{
-	color: #404969;
+	color: #242424;
 	font-size: 1.5em;
 	font-weight: 600;
 	margin: 0 0 18px 0;
@@ -774,12 +768,12 @@ ul.product-categories li {
 }
 ul.product-categories li a {
 	font-size: 14px;
-	color: #404969;
+	color: #202739;
 	font-weight: 500;
 }
 ul.product-categories li a:hover {
 	text-decoration: none;
-	color: #FF7F50;
+	color: #8c2830;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-o-transition: 0.5s all;
@@ -788,28 +782,28 @@ ul.product-categories li a:hover {
 }
 .product-categories li span.count {
 	float: right;
-	color: #404969;
+	color: #202739;
 	font-size: 15px;
 	font-weight: 500;
 }
 .details-left-info h3 {
 	margin: 0 0 10px;
 	font-size: 1.4em;
-	color: #404969;
+	color: #242424;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 p.availability {
 	color: #999;
 	font-size: 13px;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 .price_single {
 	font-size: 1.3em;
 	margin: 0.5em 0 1.2em;
 }
 span.color {
-	color: #FF7F50;
+	color: #f84545;
 	font-weight: 500;
 }
 span.reducedfrom {
@@ -839,7 +833,7 @@ p.quick_desc {
 	font-size: 13px;
 	line-height: 1.6em;
 	margin-bottom: 2em;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 ul.product-colors {
 	padding: 0;
@@ -851,6 +845,30 @@ ul.product-colors {
 	width: 32px;
 	height: 32px;
 	display: inline-block;
+}
+.color1 span {
+	background: #D2D6D5;
+}
+.color2 span {
+	background: #008CB7;
+}
+.color3 span {
+	background: #F3349E;
+}
+.color4 span {
+	background: #93D52D;
+}
+.color5 span {
+	background: #FD9812;
+}
+.color6 span {
+	background: #000000;
+}
+.color7 span {
+	background: #7800F0;
+}
+.color8 span {
+	background: #F6EF04;
 }
 ul.size {
 	padding: 0;
