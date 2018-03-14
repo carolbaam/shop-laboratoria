@@ -65,9 +65,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-md-4 top-header-right">
 				<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="./views/ourcheckout.html">
 						<h3> <div class="total">
-							<span></span> (<span id="items-counter"></span> items)</div>
+							<span></span><span id="items-counter"></span> items</div>
 							<img src="images/cart-1.png" alt="" />
 							<!-- <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" id="items-counter" class="simpleCart_quantity"></span> items)</div>
 							<img src="images/cart-1.png" alt="" /> -->
@@ -177,15 +177,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--start-bottom-shop--> 
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">About</a>
+		<!-- <div id="total-price-nav"></div> -->
+		<div id="product-container"></div>
+		<!-- <a href="#">About</a>
 		<a href="#">Services</a>
 		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+		<a href="#">Contact</a> -->
 	  </div>
 	  
-	  <div id="main">
-		<span class='flotante' style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="images/cart-1.png"> </span>
-		</div>
+	<div id="main">
+		<span id="car-icon" class='flotante' style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="images/cart-1.png"></span>
+	</div>
 	<!--end-bottom-shop--> 
 	<!--start-shoes--> 
 	<div class="shoes"> 

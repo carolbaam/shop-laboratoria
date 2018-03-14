@@ -91,9 +91,10 @@ body {
 
 .flotante {
     display:scroll;
-        position:fixed;
-        bottom:320px;
-        right:0px;
+    position:fixed;
+    bottom:320px;
+    right:0px;
+    z-index: 999;
 }
 
 /* #main > span > img{
@@ -102,6 +103,7 @@ body {
 
 } */
 
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -109,7 +111,7 @@ body {
     z-index: 999;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: white;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
