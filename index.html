@@ -8,11 +8,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Free Style A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+<script src="js/jquery-1.11.0.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
@@ -23,9 +21,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
-<!-- <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'> -->
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <!--//fonts-->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -50,13 +47,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="top-header">
 	<div class="container">
 		<div class="top-header-main">
-			<div class="col-md-4 top-header-left">
-						<!-- cambiar el logo -->
-				<a href="index.html"><img src="images/logo-4.png" alt="" /></a>
-			</div>
 			<!-- id Form. Habia un forma aqui -->
 			<form id="search-form">
-				<div class="col-md-4 top-header-right">
+				<div class="col-md-4 top-header-left">
 					<div class="search-bar">
 						<input id="search-key-word" type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 						<!-- id boton de busqueda -->
@@ -64,12 +57,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</form>
-			
+			<div class="col-md-4 top-header-middle">
+				<!-- cambiar el logo -->
+				<a href="index.html"><img src="images/logo-4.png" alt="" /></a>
+			</div>
 			<div class="col-md-4 top-header-right">
 				<div class="cart box_1">
-						<a href="./views/ourcheckout.html">
+						<a href="checkout.html">
 						<h3> <div class="total">
-							<span></span><span id="items-counter"></span> items</div>
+							<span></span> (<span id="items-counter"></span> items)</div>
 							<img src="images/cart-1.png" alt="" />
 							<!-- <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" id="items-counter" class="simpleCart_quantity"></span> items)</div>
 							<img src="images/cart-1.png" alt="" /> -->
@@ -175,49 +171,169 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    });
 			  </script>
 			<!--End-slider-script-->
-
 	<!--start-bottom-shop--> 
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<!-- <div id="total-price-nav"></div> -->
-		<div id="product-container"></div>
-		<!-- <a href="#">About</a>
+		<a href="#">About</a>
 		<a href="#">Services</a>
 		<a href="#">Clients</a>
-
 		<a href="#">Contact</a>
-	</div>
+	  </div>
 	  
-	<div id="main">
+	  <div id="main">
 		<span class='flotante' style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="images/cart-1.png"> </span>
-		
-	</div>
-	<!--end-bottom-shop--> 
-	<div class="banner-bottom">
-		<div class="container">
-			<div class="banner-bottom-top">
-				<h1 class="text-center">Los mejores productos coleccionables en un solo sitio</h1>
-			</div>
 		</div>
-	</div>
+	<!--end-bottom-shop--> 
 	<!--start-shoes--> 
 	<div class="shoes"> 
 		<div class="container"> 
 			<div id="site-container" class="product-one">
-
-								<div class="clearfix"> </div>
+				<!-- <div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">							
+							<a href="single.html">
+								<img src="images/shoes-1.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+					
+					</div>
+				</div> -->
+				<!-- <div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-2.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-3.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-13.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div> -->
+				<div class="clearfix"> </div>
 			</div>
+			<!-- <div class="product-one">
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-5.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-6.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-7.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-8.png" alt="" />
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div> -->
 		</div>
 	</div>
 	<!--end-shoes-->
-
 	<!--start-abt-shoe-->
 	<div class="abt-shoe">
 		<div class="container"> 
 				<a href="#"><img src="images/mes-libro.jpg" alt="" /></a>
-
-							<div class="clearfix"> </div>
-
+			<!-- <div class="abt-shoe-main">
+				<div class="col-md-4 abt-shoe-left">
+					<div class="abt-one">
+						<a href="single.html"><img src="images/abt-1.jpg" alt="" /></a>
+						<h4><a href="single.html">Cras dolor ligula</a></h4>
+						<p>Phasellus auctor vulputate egestas. Nulla facilisi. Cras dolor ligula, pharetra vitae efficitur ac, tempus vitae nisl. Aliquam erat volutpat. </p>
+					</div>
+				</div>
+				<div class="col-md-4 abt-shoe-left">
+					<div class="abt-one">
+						<a href="single.html"><img src="images/abt-2.jpg" alt="" /></a>
+						<h4><a href="single.html">Cras dolor ligula</a></h4>
+						<p>Phasellus auctor vulputate egestas. Nulla facilisi. Cras dolor ligula, pharetra vitae efficitur ac, tempus vitae nisl. Aliquam erat volutpat. </p>
+					</div>
+				</div>
+				<div class="col-md-4 abt-shoe-left">
+					<div class="abt-one">
+						<a href="single.html"><img src="images/abt-3.jpg" alt="" /></a>
+						<h4><a href="single.html">Cras dolor ligula</a></h4>
+						<p>Phasellus auctor vulputate egestas. Nulla facilisi. Cras dolor ligula, pharetra vitae efficitur ac, tempus vitae nisl. Aliquam erat volutpat. </p>
+					</div>
+				</div> -->
+				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
@@ -288,36 +404,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- Large modal -->
 
-    <section id="modal-product" class="modal">
-		<div>
-				<!-- class="back-modal" -->
-			<div class="align-right">
-				<a class="cerrar" href="">X</a>
-			</div>
-			<div id="over_view" class="single contact back-modal col-md-offset-1">
-				<div class="container">
+
+
+
+<section id="modal-product" class="modal">
+		<a class="cerrar align-left" href="">x</a>
+	<div id="over_view" class="single contact">
+			<div class="container">
 					<div class="single-main">
-						<div class="col-md-2 col-md-offset-2 single-main-left">
+						<div class="col-md-5 single-main-left">
 							<div class="sngl-top">
-								<div class="col-md-12 single-top-left">
+								<div class="col-md-5 single-top-left">
 									<img id="image" src="" />
 								</div>
-									
+								
 								<div class="clearfix"> </div>
 							</div>
 						</div>
-					
-						<div class="col-md-7 single-top-right">
-							<div class="details-left-info simpleCart_shelfItem">
+					</div>
+							<div class="col-md-7 single-top-right">
+								<div class="details-left-info simpleCart_shelfItem">
 									<h3 id="nombre-producto">Accessories Latest</h3>
 									<p class="availability">Availability:
-											<span class="color">In stock</span>
+										<span class="color">In stock</span>
 									</p>
 									<div class="price_single">
+										<!-- <span class="reducedfrom">$800.00</span> -->
 										<span id="prices" class="actual item_price">$600.00</span>
+										<!-- <a href="#">click for offer</a> -->
 									</div>
 									<h2 class="quick">Quick Overview:</h2>
-									<p class="quick_desc">Uno de los últimos productos en existencia, condiciones de primera.</p>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim
+										assum. Typi non habent claritatem insitam; es</p>
 
 										
 									<div class="quantity_box">
@@ -325,20 +443,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<span>Quantity:</span>
 											<select>
 												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
 											</select>
 										</ul>
 									</div>
 									<div class="clearfix"> </div>
 									<div class="single-but item_add">
-											<button class="item_add single-but" data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+										<button class="item_add single-but" data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)"
+										 type="" name="action">Agregar a carrito</button>
+
+
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>		
-			</div>
-		</div>
-    </section>
+
+							
+
+
+
+</section>
 
 
 
@@ -346,6 +473,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	<!--end-footer-text-->
 	<script src="js/app.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
