@@ -57,7 +57,7 @@ const apiMercadolibre = () => {
 
 apiMercadolibre();
 
-form.addEventListener('keyup', function(e){
+form.addEventListener('submit', function(e){
     e.preventDefault();
     responseContainer.innerHTML="";
     searchedForText=searchField.value;
