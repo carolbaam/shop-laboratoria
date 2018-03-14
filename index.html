@@ -1,27 +1,350 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<title>Free Style A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Free Style Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<!-- <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'> -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<!--//fonts-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+				</script>	
+<!-- start menu -->
+<script src="js/simpleCart.min.js"> </script>
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>				
+<!-- our css -->
+<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <h1>Busca tu producto</h1>
-    <div>
-        <form id="search-form">
-            <label></label>
-            <input id="search-key-word" type="text" required>
-            <input id="submit-btn" type="submit">
-        </form>
-    </div>
-        </header>
-    
-        <div id="site-container">
-    <ul id="response-container"></ul>
-        </div>
-    
+<body> 
+	<!--top-header-->
+<div class="top-header">
+	<div class="container">
+		<div class="top-header-main">
+			<div class="col-md-4 top-header-left">
+						<!-- cambiar el logo -->
+				<a href="index.html"><img src="images/logo-4.png" alt="" /></a>
+			</div>
+			<!-- id Form. Habia un forma aqui -->
+			<form id="search-form">
+				<div class="col-md-4 top-header-right">
+					<div class="search-bar">
+						<input id="search-key-word" type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+						<!-- id boton de busqueda -->
+						<input id="submit-btn" type="submit" value="">
+					</div>
+				</div>
+			</form>
+			
+			<div class="col-md-4 top-header-right">
+				<div class="cart box_1">
+						<a href="./views/ourcheckout.html">
+						<h3> <div class="total">
+							<span></span><span id="items-counter"></span> items</div>
+							<img src="images/cart-1.png" alt="" />
+							<!-- <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" id="items-counter" class="simpleCart_quantity"></span> items)</div>
+							<img src="images/cart-1.png" alt="" /> -->
+						</a>
+						<!-- vacias carrito -->
+						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+						<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--top-header-->
+	<!--bottom-header-->
+	<div class="header-bottom">
+		<div class="container">
+			<div class="top-nav">
+				<ul class="memenu skyblue"><li class="active"><a href="index.html">Home</a></li>
+					<li id="libros" class="grid"><a href="#">Lectura</a>
+						<div class="mepanel">
+							<div class="row">
+								<div class="col1 me-one">
+									<ul>
+										<li id="books"><a href="#">Libros</a></li>
+										<li id="comics"><a href="#">Comics</a></li>
+										<li id="mag"><a href="#">Revistas</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li id="comics" class="grid"><a href="#">Música</a>
+						<div class="mepanel">
+							<div class="row">
+								<div class="col1 me-one">
+									<ul>
+										<li id="musica"><a href="#">Audios</a></li>
+										<li id="movies"><a href="#">Películas</a></li>
+										<li id="series"><a href="#">Series</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li id="mag" class="grid"><a href="#">Coleccionables</a>
+						<div class="mepanel">
+							<div class="row">
+								<div class="col1 me-one">
+									<ul>
+										<li id="actionFigures"><a href="#">Figuras de acción</a></li>
+										<li id="starWars"><a href="#">Star Wars</a></li>
+										<li id="tazos"><a href="#">Hot Wheels</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--bottom-header-->
+	<!--banner-starts-->
+	<div class="bnr" id="home">
+		<div  id="top" class="callbacks_container">
+			<ul class="rslides" id="slider4">
+			    <li>
+					<div class="banner-1"></div>
+				</li>
+				<li>
+					<div class="banner-2"></div>
+				</li>
+				<li>
+					<div class="banner-3"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!--banner-ends--> 
+	<!--Slider-Starts-Here-->
+				<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: false,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!--End-slider-script-->
 
-    <script src="app.js"></script>
+	<!--start-bottom-shop--> 
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<!-- <div id="total-price-nav"></div> -->
+		<div id="product-container"></div>
+		<!-- <a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Clients</a>
+
+		<a href="#">Contact</a>
+	</div>
+	  
+	<div id="main">
+		<span class='flotante' style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="images/cart-1.png"> </span>
+		
+	</div>
+	<!--end-bottom-shop--> 
+	<div class="banner-bottom">
+		<div class="container">
+			<div class="banner-bottom-top">
+				<h1 class="text-center">Los mejores productos coleccionables en un solo sitio</h1>
+			</div>
+		</div>
+	</div>
+	<!--start-shoes--> 
+	<div class="shoes"> 
+		<div class="container"> 
+			<div id="site-container" class="product-one">
+
+								<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--end-shoes-->
+
+	<!--start-abt-shoe-->
+	<div class="abt-shoe">
+		<div class="container"> 
+				<a href="#"><img src="images/mes-libro.jpg" alt="" /></a>
+
+							<div class="clearfix"> </div>
+
+			</div>
+		</div>
+	</div>
+	<!--end-abt-shoe-->
+	<!--start-footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-top">
+				<div class="col-md-4 footer-left">
+					<h3>ABOUT US</h3>
+					<ul>
+						<li><a href="#">Quienes Somos</a></li>
+						<li><a href="#">Contáctanos</a></li>
+						<li><a href="#">Nuestro Sitio</a></li>
+						<li><a href="#">Noticias</a></li>
+						<li><a href="#">Equipo</a></li>
+						<li><a href="#">Carreras</a></li>					 
+					</ul>
+				</div>
+				<div class="col-md-4 footer-left">
+					<h3>SERVICIO AL CLIENTE</h3>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Envios</a></li>
+						<li><a href="#">Cancelaciones</a></li>
+						<li><a href="#">Devoluciones</a></li>
+						<li><a href="#">Guias de compra</a></li>					 
+					</ul>
+				</div>
+				<div class="col-md-4 footer-left">
+					<h3>CATEGORIAS</h3>
+					<ul>
+						<li><a href="#">Libros</a></li>
+						<li><a href="#">Música</a></li>
+						<li><a href="#">Coleccionables</a></li>			 
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--end-footer-->
+	<!--end-footer-text-->
+	<div class="footer-text">
+		<div class="container">
+			<div class="footer-main">
+				<p class="footer-class">© 2015 Free Style All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+			</div>
+		</div>
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+
+
+<!-- Large modal -->
+
+    <section id="modal-product" class="modal">
+		<div>
+				<!-- class="back-modal" -->
+			<div class="align-right">
+				<a class="cerrar" href="">X</a>
+			</div>
+			<div id="over_view" class="single contact back-modal col-md-offset-1">
+				<div class="container">
+					<div class="single-main">
+						<div class="col-md-2 col-md-offset-2 single-main-left">
+							<div class="sngl-top">
+								<div class="col-md-12 single-top-left">
+									<img id="image" src="" />
+								</div>
+									
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					
+						<div class="col-md-7 single-top-right">
+							<div class="details-left-info simpleCart_shelfItem">
+									<h3 id="nombre-producto">Accessories Latest</h3>
+									<p class="availability">Availability:
+											<span class="color">In stock</span>
+									</p>
+									<div class="price_single">
+										<span id="prices" class="actual item_price">$600.00</span>
+									</div>
+									<h2 class="quick">Quick Overview:</h2>
+									<p class="quick_desc">Uno de los últimos productos en existencia, condiciones de primera.</p>
+
+									<div class="quantity_box">
+										<ul class="product-qty">
+											<span>Quantity:</span>
+											<select>
+												<option>1</option>
+											</select>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+									<div class="single-but item_add">
+											<button class="item_add single-but" data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+    </section>
+
+
+
+
+	
+	<!--end-footer-text-->
+	<script src="js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
