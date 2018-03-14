@@ -125,4 +125,7 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-
+.color-table-checkout {
+    background-color: rgb(218, 131, 25);
+    color: white;
+}
