@@ -1,5 +1,8 @@
 $(document).ready(function(){
-    $('.carousel').carousel();
+
+    // $('.carousel').carousel();
+
+
   });
 
   
@@ -20,11 +23,27 @@ $(document).ready(function(){
 
 apiLoadFirst()
 
-const form=document.getElementById('search-form');
-const searchField=document.getElementById('search-key-word');
-const responseContainer=document.getElementsByClassName('response-container');
+const form = document.getElementById('search-form');
+const searchField = document.getElementById('search-key-word');
+const responseContainer = document.getElementsByClassName('response-container');
 const carCounter = document.getElementById('items-counter');
 let counter = 0;
+
+let barContainer = document.getElementById('product-container');
+//Cart LocalStorage from Checkout
+let cartItemCounterIndex = localStorage.getItem('counterInIndex');
+counterInIndex = parseInt(cartItemCounterIndex);
+carCounter.innerText = counterInIndex
+// const showInitialCounter => {
+//   if(counterInIndex === NaN) {
+//     carCounter.innerText = '0';
+//   }
+//   else {
+//     carCounter.innerText = counterInIndex;
+//   }
+// }
+
+// showInitialCounter();
 
 // function button fixed shop
 
