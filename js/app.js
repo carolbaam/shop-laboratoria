@@ -103,6 +103,34 @@ const apiLoad = () => {
         });
 };
 
+// const showNavPrice = totalPrice => {
+//   let priceTemplate += ` `;
+//   priceTemplate = `
+//   <p>${counter} Artículos</p>
+//   <h3>Total: ${totalPrice}</h3>
+//   <button>IR AL CARRITO</button>
+//   ` 
+// }
+
+let totalPrice = 0;
+const showInSideBar = productsArray => {
+  let carTemplate = ` `;
+
+  productsArray.forEach(product => {
+    totalPrice += parseInt(product.productPrice);
+    carTemplate += `
+    <div>
+      <p>${product.productName}</p>
+      <p>${product.productPrice}</p>
+      <button>X</button>
+    </div>
+    `
+    barContainer.innerHTML = carTemplate;
+    console.log(barContainer);
+    })
+  // showNavPrice(totalPrice);
+}
+
 
 let productsArray = [];
 const addToCar = (id, title, price) => {
