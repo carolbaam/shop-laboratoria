@@ -92,7 +92,6 @@ const showInSideBar = productsArray => {
 
   productsArray.forEach(product => {
     totalPrice += parseInt(product.productPrice);
-    
     carTemplate += `
     <div>
       <p>${product.productName}</p>
