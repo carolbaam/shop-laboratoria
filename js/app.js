@@ -218,14 +218,12 @@ const paintItems = (result) => {
         const image=item.thumbnail;
         templateProducts += `<div class="col-md-3 product-left"> 
         <div class="p-one simpleCart_shelfItem">							
-               
                     <img src="${image}" alt="" />
                     <div class="mask">
-                      <button type="button" onClick=showModal(event) ><span data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</span></button>
+                      <button class="item_add" type="button" onClick=showModal(event) data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</button>
                     </div>
-             
             <h4 class="short-text">${item.title}</h4>
-            <p><a href="#"><i></i> <span class="item_price">${item.price}MXN</span></a></p>
+            <p><a href="#"><i></i> <span class="item_price">${item.price} MXN</span></a></p>
             <button class="item_add single-but" data-id="${id}" data-title=${title} data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
 
         </div>
