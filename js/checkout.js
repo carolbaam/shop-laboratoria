@@ -1,6 +1,7 @@
 /*Local Storage Products Object Array*/
 let product = localStorage.getItem('productDetails');
 productDetails= JSON.parse(product);
+console.log(productDetails)
 // local Storage Counter
 let cartItemCounter = localStorage.getItem('cartCounter');
 cartCounter = parseInt(cartItemCounter);
@@ -16,10 +17,18 @@ localStorage.setItem('counterInIndex', cartCounter.toString());
 /**/
 
 
-const removeCard = (event, id) => {
-    console.log(event.target.parentNode.parentNode.parentNode.id);
+const removeCard = (event) => {
+    let idToRemove = event.target.parentNode.parentNode.parentNode.id;
+    let indexToRemove = '';
+    productDetails.forEach(function(element, index){
+        if(element.productId === idToRemove){
+            indexToRemove = index;
+        }
+    })
+    productDetails.splice(indexToRemove, 1);
+    console.log(productDetails);
+    localStorage.setItem('productDetailRemoved', JSON.stringify(productDetails));
     let cardToRemove = event.target.offsetParent.offsetParent.offsetParent;
-    // console.log(id);
     cardToRemove.innerHTML = " ";
 }
 

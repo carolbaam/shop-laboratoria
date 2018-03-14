@@ -5,7 +5,10 @@ $(document).ready(function(){
 
   });
 
-  
+  /*test*/
+  let newArray = localStorage.getItem('productDetailRemoved');
+  productDetailRemoved = JSON.parse(newArray);
+  console.log(productDetailRemoved);
 
   const apiLoadFirst = () => {
     fetch(`https://cors-anywhere.herokuapp.com/https://api.mercadolibre.com/sites/MLM/search?q=articulos de coleccion`, )
@@ -33,7 +36,7 @@ let barContainer = document.getElementById('product-container');
 //Cart LocalStorage from Checkout
 let cartItemCounterIndex = localStorage.getItem('counterInIndex');
 counterInIndex = parseInt(cartItemCounterIndex);
-carCounter.innerText = counterInIndex
+carCounter.innerText = parseInt(counterInIndex);
 // const showInitialCounter => {
 //   if(counterInIndex === NaN) {
 //     carCounter.innerText = '0';
@@ -121,16 +124,6 @@ const showInSideBar = productsArray => {
     })
   // showNavPrice(totalPrice);
 }
-// const showNavPrice = totalPrice => {
-//   let priceTemplate += ` `;
-//   priceTemplate = `
-//   <p>${counter} Artículos</p>
-//   <h3>Total: ${totalPrice}</h3>
-//   <button>IR AL CARRITO</button>
-//   ` 
-// }
-
-
 
 // const showNavPrice = totalPrice => {
 //   let priceTemplate += ` `;
@@ -159,18 +152,24 @@ const addToCar = (id, title, price) => {
 
 } 
 
+const showCounter = counter => {
+  localStorage.setItem('cartCounter', counter.toString());
+}
+
 const increaseCounter = (id, title, price) => {
   counter += 1;
   carCounter.innerText = counter;
   console.log(counter);
   console.log(title, price);
   addToCar(id, title, price);
+  showCounter(counter);
 }
 
 const decreaseCounter = () => {
   counter -= 1;
   carCounter.innerText = counter;
   console.log(counter);
+  showCounter(counter);
 }
 
 const changeButtonStatus = event => {
@@ -235,7 +234,7 @@ const paintItems = (result) => {
                     </div>
             <h4 class="short-text">${item.title}</h4>
             <p><a href="#"><i></i> <span class="item_price">${item.price} MXN</span></a></p>
-            <button class="item_add single-but" data-id="${id}" data-title=${title} data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+            <button class="item_add single-but" data-id="${id}" data-title="${title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
 
         </div>
     </div>
