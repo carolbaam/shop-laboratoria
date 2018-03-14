@@ -179,7 +179,7 @@ const fillmodal=(id, imagen, price, title)=>{
     const titleModal=document.getElementById("nombre-producto")
      titleModal.innerText=title;
      const priceModal=document.getElementById("prices")
-     priceModal.innerHTML=price+ "MXN";
+     priceModal.innerHTML=price+ '' + "MXN";
     const containerModal=document.getElementById("modal-product");
   
 }
@@ -197,34 +197,19 @@ const paintItems = (result) => {
         const image=item.thumbnail;
         templateProducts += `<div class="col-md-3 product-left"> 
         <div class="p-one simpleCart_shelfItem">							
-               
-                    <img src="${image}" alt="" />
-                    <div class="mask">
-                      <button type="button" onClick=showModal(event) ><span data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</span></button>
-                    </div>
-             
+                <img src="${image}" alt="" />
+                <div class="mask">
+                    <button class="item_add single-but" type="button" onClick=showModal(event) ><span data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</span></button>
+                </div>             
             <h4 class="short-text">${item.title}</h4>
-            <p><a href="#"><i></i> <span class="item_price">${item.price}MXN</span></a></p>
-            <button class="item_add single-but" data-id="${id}" data-title="${title}" data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+
+            <p><a href="#"><i></i> <span class="item_price">${item.price} MXN</span></a></p>
+            <button class="item_add single-but" data-id="${id}" data-title=${title} data-price="${item.price}" onclick="changeButtonStatus(event)" type="" name="action">Agregar a carrito</button>
+
 
         </div>
     </div>
-        `
-    //     `<div class="col s12 m3">
-    //     <div class="card">
-    //         <div class="card-image">
-    //             <img src="${image}">
-    //         </div>
-    //         <div class="card-content">
-    //             <p class="card-title short-text">${item.title}</p>
-    //             <p class="">${item.price} MXN</p>
-    //         </div>
-    //         <div class="card-action">
-    //             <button data-id="${id}" data-title="${item.title}" data-price="${item.price}" onclick="changeButtonStatus(event)" class="btn waves-effect" type="" name="action">Agregar a carrito</button>
-    //         </div>
-    //     </div>
-    // </div>`
-    
+        `    
 //console.log(available);
          
      });
