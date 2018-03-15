@@ -185,6 +185,7 @@ const decreaseCounter = () => {
 }
 
 const changeButtonStatus = event => {
+    
     let element = event.target
     let buttonText = element.firstChild.data;
     let itemId = element.dataset.id;
@@ -194,6 +195,7 @@ const changeButtonStatus = event => {
     if(buttonText === "Agregar a carrito") {
         element.innerText = "Remover del carrito";
         increaseCounter(itemId, itemTitle, itemPrice);
+        element.classList.add('item_added')
     } else {
         element.innerText = "Agregar a carrito";
         decreaseCounter();
@@ -219,10 +221,11 @@ const showModal=(event)=>{
 const fillmodal=(id, imagen, price, title)=>{
     const imgCont=document.getElementById("image")
     imgCont.setAttribute("src",imagen);
+    imgCont.classList.add("size-modal-image");
     const titleModal=document.getElementById("nombre-producto")
      titleModal.innerText=title;
      const priceModal=document.getElementById("prices")
-     priceModal.innerHTML=price+ "MXN";
+     priceModal.innerHTML=price+ ' '+ "MXN";
     const containerModal=document.getElementById("modal-product");
   
 }
@@ -238,8 +241,8 @@ const paintItems = (result) => {
         const addres=item.address.state_name;
        const title=item.title;
         const image=item.thumbnail;
-        templateProducts += `<div class="col-md-3 product-left"> 
-        <div class="p-one simpleCart_shelfItem">							
+        templateProducts += `<div class="col-md-3 product-left "> 
+        <div class="p-one simpleCart_shelfItem color-card">							
                     <img src="${image}" alt="" />
                     <div class="mask">
                       <button class="item_add" type="button" onClick=showModal(event) data-image=${image} data-title='${item.title}' data-price=${item.price} data-id=${id}>Quick View</button>
