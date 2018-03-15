@@ -75,10 +75,10 @@ const calculateTotal = productDetails => {
     tableTemplate += `<tr>
                         <td>
                             <div id="${product.productId}" class="panel panel-default row">
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <img src="https://lorempixel.com/200/200/city/6">
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-8">
                                     <div class="panel-body">
                                         <h5 class="panel-title">${product.productName}</h5>
                                         <p>Código del Artículo: ${product.productId}</p>
