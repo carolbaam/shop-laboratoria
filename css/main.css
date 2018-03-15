@@ -140,7 +140,7 @@ body {
 }
 
 #total-price-nav {
-    background-color: rgb(238, 83, 26);
+    background-color:black;
     color: white;
     text-align: center;
 }
@@ -170,4 +170,17 @@ body {
 
 .color-card {
     background-color: rgb(202, 192, 149);
+}
+
+.style-pay-btn {
+    height: 40px;
+    width: 150px;
+    color:white;
+    background-color:rgb(238, 83, 26);
+}
+
+.a-padding {
+    padding: 0px !important; 
+    color: white !important;
+    font-size: 20px !important;
 }
