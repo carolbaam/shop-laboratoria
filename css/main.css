@@ -184,3 +184,26 @@ body {
     color: white !important;
     font-size: 20px !important;
 }
+
+/*Style text carousel*/
+
+.tex-banner{
+   background-color: #111;
+   opacity: 0.8;
+   color:whitesmoke;
+   text-align: center;
+   margin bottom :20px;
+
+}
+
+h3{
+   font-size: 2.5em;
+}
+
+h5{
+   font-size: 1.5em;
+   color:white;
+
+}
+
+/*End text carousel*/
