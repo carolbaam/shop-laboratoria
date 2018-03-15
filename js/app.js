@@ -116,7 +116,7 @@ const showPrice = priceArray => {
   price = `
   <p>${artNum} Articulos</p>
   <h3>TOTAL: ${totalPrice} MXN</h3>
-  <button>IR AL CARRITO</button>`
+  <button class=' style-pay-btn'><a class='a-padding' href='views/ourcheckout.html'>IR AL CARRITO</a></button>`
   totalPriceTitle.innerHTML = price;
 
   let priceBreakdown = ` `;
