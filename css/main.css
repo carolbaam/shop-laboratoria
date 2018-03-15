@@ -38,9 +38,18 @@
     height: 100%;
 }
 
+.size-modal-image {
+    width: 100px;
+    height: 100px;
+}
+
+.container-modal {
+    margin-left: 40px;
+    width: 100%;
+}
 .back-modal {
-    width: 85%;
-    height: 100%;
+    width: 80%;
+    height: 60%;
     background-color: #fff;
     justify-content: center;
     align-items: center;
@@ -64,7 +73,7 @@
 
 /* Start Style button fixed shop */
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
     transition: background-color .5s;
 }
 
@@ -127,8 +136,8 @@ body {
 
 
 .color-table-checkout {
-    background-color: rgb(218, 131, 25);
-    color: white;
+    background-color: rgb(202, 192, 149);
+    color: black;
 }
 
 /* tamaño de los banner */
@@ -137,6 +146,14 @@ body {
 }
 
 .logo-size{
-    height: 90px;
+    height: 110px;
 }
 
+
+.logo-size{
+    height: 50px;
+}
+
+.color-card {
+    background-color: rgb(202, 192, 149);
+}

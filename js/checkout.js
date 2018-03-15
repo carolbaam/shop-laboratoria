@@ -31,7 +31,7 @@ const showResume = total => {
     resumeCard = `<thead class="color-table-checkout col-md-12">
                     <tr>
                         <th >
-                            <h3>Resumen</h3>
+                            <h3>Resumen Pago</h3>
                         </th>
                     </tr>
                 </thead>
@@ -60,22 +60,21 @@ const showResume = total => {
 const calculateTotal = productDetails => {
   let tableTemplate = ` `;
   let totalGap = ` `;
-
+ console.log(productDetails)
   productDetails.forEach(product => {
-    totalPrice += parseInt(product.productPrice);
-    // <img src="https://lorempixel.com/100/100/nature/6">
+      totalPrice += parseInt(product.productPrice);
     tableTemplate += `<tr>
                         <td>
                             <div id="${product.productId}" class="panel panel-default row">
                                 <div class="col-md-3">
-                                    <img src="https://lorempixel.com/100/100/nature/6">
+                                    <img src="https://lorempixel.com/200/200/city/6">
                                 </div>
                                 <div class="col-md-9">
                                     <div class="panel-body">
                                         <h5 class="panel-title">${product.productName}</h5>
                                         <p>Código del Artículo: ${product.productId}</p>
                                         <p>Disponible: In Stock</p>
-                                        <p>Precio: $ ${product.productPrice} MXN</p>
+                                        <p>Precio: ${product.productPrice} MXN</p>
                                     </div>
                                         <div class="panel-footer">
                                             <button class="bnt item_add single-but">Eliminar</button>
