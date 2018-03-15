@@ -125,4 +125,18 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
+/*styles sideBar*/
+.divPadding {
+    padding: 20px;
+}
+
+#total-price-nav {
+    background-color: rgb(238, 83, 26);
+    color: white;
+    text-align: center;
+}
+
+#mySidenav, #aPadding {
+    padding-top: 0;
+}
 
