@@ -1,6 +1,6 @@
 # Pandora
 ***
-![Pandora](./images/logopandoraok.png)
+
 ![Pandora](./images/screen1.png)
 
 ## Flujo de trabajo: El mercado de los coleccionistas es de 270 millones, con lo cual existe un mercardo potencial que va en crecimiento.
